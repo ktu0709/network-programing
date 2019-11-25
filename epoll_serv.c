@@ -20,8 +20,8 @@ int main(int argc,char *argv[])
  struct sockaddr_in clnt_adr;
  socklen_t adr_sz;
 
- struct epoll_event *ep_events; //커널에서 발생하는 
- struct epoll_event event;
+ struct epoll_event *ep_events; //커널에서 발생하는 event
+ struct epoll_event event; //소켓을 관찰하기위한 event (->커널)
  int epfd,event_cnt;
 
  if(argc!=2)
